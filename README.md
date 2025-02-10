@@ -8,13 +8,5 @@ For preprocessing, I made sure there were no duplicate entries, and to see what 
 Since the data was categorized by colors and also by habitats(pond,river, etc.), I initially started with Decision Tree regression. This model turned out to be extremely inaccurate and perform significantly worse than simple baseline accuracy, and doing more feature selection didn't improve the accuracy much.
 Next, I tried to do linear regression. This did perform much better than the decision tree, but the accuracy of the model was about the same as just guessing each value was the median age of the data. 
 Going back to decision trees, I made a model of a random forest. This was a significant improvement from just a decision tree alone, but suprisingly, it still performed worse than the linear regression model.
-Overall, after looking at visualizations of the predicted vs actual values of my models, and the correlation matrix
 
-
-Provide a report (in your repository as a README file) summarizing:
-Problem definition and dataset description.
-EDA findings.
-Preprocessing steps.
-For preprocessing, I made sure there were no duplicate entries, and to see what columns included null values, if any. There were only a few rows that had no gender, and since my feature selection excluded male fish, I dropped these rows. This helped my accuracy improve, but only slightly. Initially 
-Modeling approach and results.
-Reflections on challenges faced and lessons learned.
+Overall, after looking at visualizations of the predicted vs actual values of my models, and the correlation matrix the main problem I had was the fact that none of the models did any better than predicting that any given goldfish would have the average lifespan of 14 years. There were no clear corellations between the data, and trying to adjust the hyperparameters or factor selection still was not able to improve the models to be able to acuratelly predict the lifespan at all. If I had the time to play around with neural networks and unsupervised learning models, I would've liked to see if there were patterns that these models weren't able to pick up.
